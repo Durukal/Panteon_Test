@@ -7,6 +7,7 @@ namespace Assets.Scripts {
         private void Awake() {
             Health = (int)Enums.BuildingHealth.PowerPlant;
             FactionCheck();
+            CurrentHealth = Health;
             IsBuilding = true;
         }
 

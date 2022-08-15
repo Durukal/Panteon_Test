@@ -8,15 +8,7 @@ namespace Assets.Scripts {
         public static Action<Building> OnDeSelected;
         public Vector2Int Dimensions;
         public bool IsBuilt = false;
-
-        private void Awake() {
-            if (!IsAI) {
-                Faction = (int)Enums.Factions.Allies;
-                if (Faction == (int)Enums.Factions.Allies) { }
-            } else if (IsAI) {
-                Faction = (int)Enums.Factions.Enemies;
-            }
-        }
+        
 
         public void Selected() {
             if (!IsAI) {

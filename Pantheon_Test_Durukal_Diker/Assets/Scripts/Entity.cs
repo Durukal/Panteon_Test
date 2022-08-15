@@ -13,7 +13,7 @@ public abstract class Entity : MonoBehaviour {
     }
 
     [SerializeField]
-    private int CurrentHealth;
+    internal int CurrentHealth;
 
     public bool IsDead = false;
 

@@ -28,13 +28,11 @@ namespace Assets.Scripts {
 
         internal float AttackTimer = 0f;
 
-        
-
 
         public void OnTriggerStay2D(Collider2D collision) {
             var enemyEntity = collision.gameObject.GetComponent<Entity>();
             if (enemyEntity != null && enemyEntity.Faction != this.Faction) {
-                if (enemyEntity.gameObject.CompareTag("Peasant") || enemyEntity.gameObject.CompareTag("Infantry") || enemyEntity.gameObject.CompareTag("Knight")) {
+                if (enemyEntity.gameObject.GetComponent<Entity>().IsUnit) {
                     if (this.Faction == (int)Enums.Factions.Enemies) {
                         GetComponent<Pathfinding.AIDestinationSetter>().target = enemyEntity.transform;
                     }
@@ -43,8 +41,8 @@ namespace Assets.Scripts {
                 }
 
                 if (!enemyEntity.IsDead && enemyEntity.gameObject.activeSelf) {
-                    if (enemyEntity.gameObject.CompareTag("Barracks") || enemyEntity.gameObject.CompareTag("PowerPlant")) {
-                        if (!enemyEntity.gameObject.GetComponent<Building>().IsBuilt) { } else {
+                    if (enemyEntity.gameObject.GetComponent<Entity>().IsBuilding) {
+                        if (enemyEntity.gameObject.GetComponent<Building>().IsBuilt) {
                             DealDamage(enemyEntity, Damage);
                         }
                     }

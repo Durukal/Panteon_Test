@@ -46,6 +46,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -135,12 +136,12 @@ MonoBehaviour:
   _Health: 0
   CurrentHealth: 0
   IsDead: 0
-  Name: 
+  Name: Infantry
   _Faction: 0
   _IsAI: 0
+  IsColliding: 0
   MovementSpeed: 0
   Damage: 0
-  unitType: 0
   _AITarget: {fileID: 0}
   IsSelected: 0
   AttackCoolDown: 2
@@ -159,6 +160,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

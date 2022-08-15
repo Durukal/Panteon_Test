@@ -7,6 +7,7 @@ namespace Assets.Scripts {
     public class Barrack : Building {
         private void Awake() {
             Health = (int)Enums.BuildingHealth.Barracks;
+            CurrentHealth = Health;
             FactionCheck();
             IsBuilding = true;
         }

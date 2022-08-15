@@ -12,8 +12,8 @@ public class Peasant : Unit {
         IsUnit = true;
     }
 
-    void Update() {
-        AttackTimer += Time.deltaTime;
+    void FixedUpdate() {
+        AttackTimer += Time.fixedDeltaTime;
 
 
         if (Faction == (int)Enums.Factions.Allies && IsSelected && AITarget.gameObject.activeSelf) {
